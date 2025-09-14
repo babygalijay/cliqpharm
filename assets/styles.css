@@ -1,0 +1,153 @@
+/* General Reset */
+body, html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+  color: #333;
+}
+
+/* Navbar */
+.navbar {
+  background-color: #2e8b57 !important;
+}
+.navbar-brand, .nav-link {
+  color: white !important;
+  font-weight: 500;
+}
+.nav-link:hover {
+  color: #ffb347 !important;
+}
+
+/* Hero Section */
+header {
+  background-color: #ffb347 !important;
+  color: #2e8b57;
+  text-align: center;
+}
+header h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+header p {
+  font-size: 1.2rem;
+  margin-top: 10px;
+}
+header .btn {
+  background-color: #2e8b57;
+  color: white;
+  border: none;
+  font-size: 1.1rem;
+  padding: 10px 20px;
+  transition: 0.3s;
+}
+header .btn:hover {
+  background-color: #246b43;
+}
+
+/* Product Section */
+h2 {
+  color: #2e8b57;
+  font-weight: bold;
+}
+.card {
+  border: none;
+  border-radius: 10px;
+  transition: transform 0.2s ease-in-out;
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+}
+.card:hover {
+  transform: translateY(-5px);
+}
+.card-title {
+  color: #2e8b57;
+  font-weight: bold;
+}
+.card .btn {
+  background-color: #ffb347;
+  color: #2e8b57;
+  font-weight: 500;
+}
+.card .btn:hover {
+  background-color: #e09e34;
+  color: white;
+}
+
+/* Footer */
+footer {
+  background-color: #2e8b57;
+  color: white;
+  font-size: 0.9rem;
+}
+
+/* Buttons */
+.btn-primary {
+  background-color: #2e8b57;
+  border: none;
+}
+.btn-primary:hover {
+  background-color: #246b43;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 2rem;
+  }
+  header p {
+    font-size: 1rem;
+  }
+}
+/* Footer Styling */
+.footer {
+  background-color: #ff8c42 !important; /* Burnt Orange */
+  color: #fff !important;
+  padding-top: 50px;
+  padding-bottom: 20px;
+}
+
+.footer h4, 
+.footer h5 {
+  color: #fff !important;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.footer p, 
+.footer .footer-link {
+  color: #f5f5f5 !important;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.footer .footer-link {
+  display: block;
+  text-decoration: none;
+  margin-bottom: 8px;
+  transition: color 0.3s ease;
+}
+
+.footer .footer-link:hover {
+  color: #222 !important;
+}
+
+/* Social Media Icons */
+.footer .social-icons a {
+  color: #fff !important;
+  font-size: 20px;
+  margin-right: 10px;
+  transition: color 0.3s ease;
+}
+
+.footer .social-icons a:hover {
+  color: #222 !important;
+}
+
+/* Bottom Bar */
+.footer-bottom {
+  background-color: #e67330 !important;
+  color: #fff !important;
+  font-size: 14px;
+  padding: 10px 0;
+  margin-top: 20px;
+}

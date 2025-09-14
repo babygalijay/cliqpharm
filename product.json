@@ -1,0 +1,32 @@
+[
+  {
+    "name": "Pain Relief Tablets",
+    "image": "https://via.placeholder.com/300x200",
+    "description": "Fast relief for headaches and body pain."
+  },
+  {
+    "name": "Vitamin C 1000mg",
+    "image": "https://via.placeholder.com/300x200",
+    "description": "Boost your immunity with daily vitamin C."
+  },
+  {
+    "name": "Skin Care Cream",
+    "image": "https://via.placeholder.com/300x200",
+    "description": "Protect and nourish your skin every day."
+  },
+  {
+    "name": "Allergy Syrup",
+    "image": "https://via.placeholder.com/300x200",
+    "description": "Relieve sneezing and allergies quickly."
+  },
+  {
+    "name": "Blood Pressure Monitor",
+    "image": "https://via.placeholder.com/300x200",
+    "description": "Stay on top of your heart health."
+  },
+  {
+    "name": "Diabetes Test Kit",
+    "image": "https://via.placeholder.com/300x200",
+    "description": "Easy-to-use home glucose monitoring kit."
+  }
+]
