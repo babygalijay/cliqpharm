@@ -10,35 +10,41 @@
 
   <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
   <link rel="stylesheet" href="assets/css/styles.css">
-</head>
-<body>
-
+  <!-- Bootstrap Icons (needed for cart icon) -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
 <!-- Navbar -->
-<nav class="navbar navbar-expand-lg">
+<nav class="navbar navbar-expand-lg bg-light shadow-sm">
   <div class="container">
     <!-- Logo + Brand Name -->
-    <a class="navbar-brand fw-bold d-flex align-items-center" href="#">
-      <img src="https://res.cloudinary.com/dkoeutxie/image/upload/v1757779459/istockphoto-1275720974-612x612_sdappm.jpg" alt="CliqPharm Logo" width="40" height="40" class="me-2">
+    <a class="navbar-brand fw-bold d-flex align-items-center" href="index.html">
+      <img src="https://res.cloudinary.com/dkoeutxie/image/upload/v1757779459/istockphoto-1275720974-612x612_sdappm.jpg" 
+           alt="CliqPharm Logo" width="40" height="40" class="me-2">
       CliqPharm
     </a>
 
     <!-- Mobile Toggle Button -->
-    <button class="navbar-toggler text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
       <span class="navbar-toggler-icon"></span>
     </button>
 
     <!-- Navbar Links -->
     <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ms-auto">
+      <ul class="navbar-nav ms-auto align-items-center">
         <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
         <li class="nav-item"><a class="nav-link" href="product.html">Products</a></li>
         <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
         <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        <li class="nav-item position-relative nav-item-cart ms-3">
+          <a class="nav-link" href="cart.html">
+            <i class="bi bi-cart-fill fs-5"></i> Cart
+            <span id="cart-count" class="badge rounded-pill bg-danger nav-cart-badge">0</span>
+          </a>
+        </li>
       </ul>
-      <a href="#" class="btn btn-light ms-3">Shop Now</a>
     </div>
   </div>
 </nav>
+
 
 
 <!-- Hero Section -->
@@ -104,18 +110,197 @@
   </div>
 </section>
 
-<!-- ✅ Insert Drug Adverts Section Here -->
+<!-- ✅ Top Selling Medicines Section -->
 <section class="py-5" style="background-color: #fff7e6;">
   <div class="container text-center">
     <h2 class="mb-4" data-aos="fade-up">Top Selling Medicines</h2>
     <p class="mb-5" data-aos="fade-up" data-aos-delay="100">
       Trusted solutions for your health needs. Order now and stay healthy!
     </p>
+
+    <!-- Pains Category -->
+    <h3 class="mb-4 mt-5 text-primary" data-aos="fade-up">Pains & Relief</h3>
     <div class="row g-4">
-      <!-- Your medicine cards go here -->
+      <div class="col-md-3" data-aos="zoom-in">
+        <div class="card h-100 shadow-sm">
+          <img src="https://via.placeholder.com/200" class="card-img-top" alt="Painkiller">
+          <div class="card-body">
+            <h5 class="card-title">Ibuprofen 400mg</h5>
+            <p class="card-text">Fast relief for headaches and body pain.</p>
+            <p class="fw-bold text-success">₦2,500</p>
+            <a href="#" class="btn btn-primary btn-sm">Order Now</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3" data-aos="zoom-in" data-aos-delay="100">
+        <div class="card h-100 shadow-sm">
+          <img src="https://via.placeholder.com/200" class="card-img-top" alt="Painkiller">
+          <div class="card-body">
+            <h5 class="card-title">Paracetamol</h5>
+            <p class="card-text">Mild pain and fever relief tablets.</p>
+            <p class="fw-bold text-success">₦1,200</p>
+            <a href="#" class="btn btn-primary btn-sm">Order Now</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3" data-aos="zoom-in" data-aos-delay="200">
+        <div class="card h-100 shadow-sm">
+          <img src="https://via.placeholder.com/200" class="card-img-top" alt="Painkiller">
+          <div class="card-body">
+            <h5 class="card-title">Tramadol 50mg</h5>
+            <p class="card-text">Effective for moderate to severe pain relief.</p>
+            <p class="fw-bold text-success">₦2,000</p>
+            <a href="#" class="btn btn-primary btn-sm">Order Now</a>
+            </div>
+            </div>
+            </div>
+            <div class="col-md-3" data-aos="zoom-in" data-aos-delay="300">
+        <div class="card h-100 shadow-sm">
+          <img src="https://via.placeholder.com/200" class="card-img-top" alt="Painkiller">
+          <div class="card-body">
+            <h5 class="card-title">Tramadol 100mg</h5>
+            <p class="card-text">Stronger dose for severe pain management.</p>
+            <p class="fw-bold text-success">₦4,500</p>
+            <a href="#" class="btn btn-primary btn-sm">Order Now</a>
+            </div>
+            </div>
+            </div>
+        
+    </div>
+
+    <!-- Multivitamins Category -->
+    <h3 class="mb-4 mt-5 text-primary" data-aos="fade-up">Multivitamins</h3>
+    <div class="row g-4">
+      <div class="col-md-3" data-aos="zoom-in">
+        <div class="card h-100 shadow-sm">
+          <img src="https://via.placeholder.com/200" class="card-img-top" alt="Multivitamin">
+          <div class="card-body">
+            <h5 class="card-title">Vitamin C 1000mg</h5>
+            <p class="card-text">Boost your immune system naturally.</p>
+            <p class="fw-bold text-success">₦3,000</p>
+            <a href="#" class="btn btn-primary btn-sm">Order Now</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3" data-aos="zoom-in" data-aos-delay="100">
+        <div class="card h-100 shadow-sm">
+          <img src="https://via.placeholder.com/200" class="card-img-top" alt="Multivitamin">
+          <div class="card-body">
+            <h5 class="card-title">Centrum Multivitamins</h5>
+            <p class="card-text">Complete daily multivitamin supplement.</p>
+            <p class="fw-bold text-success">₦5,500</p>
+            <a href="#" class="btn btn-primary btn-sm">Order Now</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3" data-aos="zoom-in" data-aos-delay="200">
+        <div class="card h-100 shadow-sm">
+          <img src="https://via.placeholder.com/200" class="card-img-top" alt="Multivitamin">
+          <div class="card-body">
+            <h5 class="card-title">Vitamin D3 2000 IU</h5>
+            <p class="card-text">Supports bone health and immune function.</p>
+            <p class="fw-bold text-success">₦4,200</p>
+            <a href="#" class="btn btn-primary btn-sm">Order Now</a>
+          </div>
+        </div>
+    </div>
+    <div class="col-md-3" data-aos="zoom-in" data-aos-delay="300">
+        <div class="card h-100 shadow-sm">
+          <img src="https://via.placeholder.com/200" class="card-img-top" alt="Multivitamin">
+          <div class="card-body">
+            <h5 class="card-title">Vitamin E</h5>
+            <p class="card-text">Energy boost and nervous system support, skin health support.</p>
+            <p class="fw-bold text-success">₦7000</p>
+            <a href="#" class="btn btn-primary btn-sm">Order Now</a>
+          </div>
+        </div>
+      </div>
+
+    <!-- Herbal Teas Category -->
+    <h3 class="mb-4 mt-5 text-primary" data-aos="fade-up">Herbal Teas</h3>
+    <div class="row g-4">
+      <div class="col-md-3" data-aos="zoom-in">
+        <div class="card h-100 shadow-sm">
+          <img src="https://via.placeholder.com/200" class="card-img-top" alt="Herbal Tea">
+          <div class="card-body">
+            <h5 class="card-title">Green Tea</h5>
+            <p class="card-text">Antioxidant-rich, boosts metabolism.</p>
+            <p class="fw-bold text-success">₦4,000</p>
+            <a href="#" class="btn btn-primary btn-sm">Order Now</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3" data-aos="zoom-in" data-aos-delay="100">
+        <div class="card h-100 shadow-sm">
+          <img src="https://via.placeholder.com/200" class="card-img-top" alt="Herbal Tea">
+          <div class="card-body">
+            <h5 class="card-title">Chamomile Tea</h5>
+            <p class="card-text">Calming tea for stress relief.</p>
+            <p class="fw-bold text-success">₦4,500</p>
+            <a href="#" class="btn btn-primary btn-sm">Order Now</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3" data-aos="zoom-in" data-aos-delay="200">
+        <div class="card h-100 shadow-sm">
+          <img src="https://via.placeholder.com/200" class="card-img-top" alt="Herbal Tea">
+          <div class="card-body">
+            <h5 class="card-title">lungs detox</h5>
+            <p class="card-text">heals, cleanses and detoxify the lungs from smoke, dust, tartar and bacteria.</p>
+            <p class="fw-bold text-success">₦5,200</p>
+            <a href="#" class="btn btn-primary btn-sm">Order Now</a>
+          </div>
+        </div>
+    </div>
+    <div class="col-md-3" data-aos="zoom-in" data-aos-delay="300">
+        <div class="card h-100 shadow-sm">
+          <img src="https://via.placeholder.com/200" class="card-img-top" alt="Herbal Tea">
+          <div class="card-body">
+            <h5 class="card-title">Afro-Male</h5>
+            <p class="card-text">Enhances stamina, coorects low libido, boosts energy and make intimacy more fun.</p>
+            <p class="fw-bold text-success">₦7000</p>
+            <a href="#" class="btn btn-primary btn-sm">Order Now</a>
+          </div>
+        </div>
+      </div>
+
+    <!-- Honey Category -->
+    <h3 class="mb-4 mt-5 text-primary" data-aos="fade-up">Honey</h3>
+    <div class="row g-4">
+      <div class="col-md-3" data-aos="zoom-in">
+        <div class="card h-100 shadow-sm">
+          <img src="https://via.placeholder.com/200" class="card-img-top" alt="Honey">
+          <div class="card-body">
+            <h5 class="card-title">Natural Honey 500ml</h5>
+            <p class="card-text">Pure and organic honey for wellness.</p>
+            <p class="fw-bold text-success">₦7,500</p>
+            <a href="#" class="btn btn-primary btn-sm">Order Now</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3" data-aos="zoom-in" data-aos-delay="100">
+        <div class="card h-100 shadow-sm">
+          <img src="https://via.placeholder.com/200" class="card-img-top" alt="Honey">
+          <div class="card-body">
+            <h5 class="card-title">Ginger Honey Mix</h5>
+            <p class="card-text">Perfect blend for cough relief & energy.</p>
+            <p class="fw-bold text-success">₦4,500</p>
+            <a href="#" class="btn btn-primary btn-sm">Order Now</a>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
+
+  <div class="text-center mt-5" data-aos="fade-up" data-aos-delay="400">
+  <a href="product.html" class="btn btn-outline-primary btn-lg px-5">
+    View More Products
+  </a>
+</div>
+
 </section>
+
 <!-- ✅ End Drug Adverts Section -->
 
 <!-- Adverts Section -->
@@ -263,6 +448,97 @@
     duration: 1000,
     once: true
   });
+</script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const products = [
+      {
+        title: "Cough Syrup",
+        text: "Relieves cough and soothes the throat.",
+        price: "₦3,500",
+        img: "https://via.placeholder.com/200"
+      },
+      {
+        title: "Immune Booster",
+        text: "Supports immunity with natural herbs.",
+        price: "₦6,000",
+        img: "https://via.placeholder.com/200"
+      },
+      {
+        title: "Allergy Relief",
+        text: "Helps reduce allergy symptoms.",
+        price: "₦4,000",
+        img: "https://via.placeholder.com/200"
+      }
+    ];
+
+    const productList = document.getElementById("product-list");
+    const loadMoreBtn = document.getElementById("load-more");
+    let index = 0;
+
+    loadMoreBtn.addEventListener("click", function () {
+      for (let i = 0; i < 3 && index < products.length; i++, index++) {
+        const p = products[index];
+        const productCard = `
+          <div class="col-md-3" data-aos="zoom-in">
+            <div class="card h-100 shadow-sm">
+              <img src="${p.img}" class="card-img-top" alt="${p.title}">
+              <div class="card-body">
+                <h5 class="card-title">${p.title}</h5>
+                <p class="card-text">${p.text}</p>
+                <p class="fw-bold text-success">${p.price}</p>
+                <a href="#" class="btn btn-primary btn-sm">Order Now</a>
+              </div>
+            </div>
+          </div>`;
+        productList.insertAdjacentHTML("beforeend", productCard);
+      }
+
+      if (index >= products.length) {
+        loadMoreBtn.textContent = "No More Products";
+        loadMoreBtn.disabled = true;
+      }
+    });
+  });
+</script>
+<script>
+  // updates cart count and enables/disables checkout link
+  function updateCartCount() {
+    try {
+      const cart = JSON.parse(localStorage.getItem('cart')) || [];
+      const count = cart.reduce((sum, item) => sum + (item.quantity || 0), 0);
+      const cartCountEl = document.getElementById('cart-count');
+      const checkoutLink = document.getElementById('checkout-link');
+
+      cartCountEl.textContent = count;
+
+      // disable checkout if cart empty
+      if (count === 0) {
+        checkoutLink.classList.add('disabled');
+        checkoutLink.setAttribute('aria-disabled', 'true');
+        // keep href safe: optionally point to # or leave as checkout.html but disabled UX already applied
+        checkoutLink.href = '#';
+      } else {
+        checkoutLink.classList.remove('disabled');
+        checkoutLink.removeAttribute('aria-disabled');
+        checkoutLink.href = 'checkout.html';
+      }
+    } catch (err) {
+      console.error('updateCartCount error', err);
+    }
+  }
+
+  // Run on load
+  document.addEventListener('DOMContentLoaded', updateCartCount);
+
+  // React to cart changes in other tabs/windows
+  window.addEventListener('storage', (e) => {
+    if (e.key === 'cart') updateCartCount();
+  });
+
+  // React to a custom event you can dispatch after modifying the cart on the same page
+  document.addEventListener('cartUpdated', updateCartCount);
+
 </script>
 
 </body>

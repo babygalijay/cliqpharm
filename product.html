@@ -9,28 +9,57 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Products - CliqPharm</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+  <style>
+    .hidden-product { display: none; }
+    .nav-cart-badge {
+      position: absolute;
+      top: 6px;
+      right: -6px;
+      font-size: 0.65rem;
+    }
+    .nav-item-cart {
+      position: relative;
+    }
+    .card img {
+      height: 150px;
+      object-fit: cover;
+    }
+  </style>
+</head>
+<body>
 
 <!-- Navbar -->
-<nav class="navbar navbar-expand-lg" style="background-color:#ffb347;">
+<nav class="navbar navbar-expand-lg bg-success navbar-dark">
   <div class="container">
-    <a class="navbar-brand d-flex align-items-center text-white fw-bold" href="index.html">
-      <img src="https://res.cloudinary.com/dkoeutxie/image/upload/v1757779459/istockphoto-1275720974-612x612_sdappm.jpg" 
-           alt="CliqPharm Logo" width="40" height="40" class="me-2 rounded-circle">
+    <a class="navbar-brand fw-bold d-flex align-items-center" href="index.html">
+      <img src="https://res.cloudinary.com/dkoeutxie/image/upload/v1757779459/istockphoto-1275720974-612x612_sdappm.jpg" alt="CliqPharm Logo" width="40" height="40" class="me-2">
       CliqPharm
     </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-      <span class="navbar-toggler-icon"></span>
-    </button>
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ms-auto">
         <li class="nav-item"><a class="nav-link text-white" href="index.html">Home</a></li>
-        <li class="nav-item"><a class="nav-link text-white active" href="products.html">Products</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="product.html">Products</a></li>
         <li class="nav-item"><a class="nav-link text-white" href="about.html">About</a></li>
         <li class="nav-item"><a class="nav-link text-white" href="contact.html">Contact</a></li>
+        <li class="nav-item nav-item-cart">
+          <a class="nav-link text-white" href="cart.html">
+            <i class="bi bi-cart-fill"></i> Cart
+            <span id="cart-count" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">0</span>
+          </a>
+        </li>
       </ul>
     </div>
   </div>
 </nav>
+
 
 <!-- Page Header -->
 <header class="py-5 text-center text-white" style="background-color: #2e8b57;">
@@ -40,49 +69,189 @@
   </div>
 </header>
 
-<!-- Products Grid -->
+<!-- Products Section -->
 <section class="py-5">
   <div class="container">
-    <div class="row g-4" id="product-list">
-      <!-- Products will load here dynamically -->
-       <div class="row g-4" id="product-list">
-  <div class="col-md-4 col-sm-6">
-    <div class="card h-100 shadow-sm">
-      <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Pain Relief Tablets">
-      <div class="card-body">
-        <h5 class="card-title">Pain Relief Tablets</h5>
-        <p class="card-text">Fast relief for headaches and body pain.</p>
-        <a href="#" class="btn btn-success">Buy Now</a>
-      </div>
-    </div>
-  </div>
+    <h2 class="text-center mb-4">Our Products</h2>
+    <div class="row" id="product-list">
 
-  <div class="col-md-4 col-sm-6">
-    <div class="card h-100 shadow-sm">
-      <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Vitamin C 1000mg">
-      <div class="card-body">
-        <h5 class="card-title">Vitamin C 1000mg</h5>
-        <p class="card-text">Boost your immunity with daily vitamin C.</p>
-        <a href="#" class="btn btn-success">Buy Now</a>
+      <!-- Amoxicillin -->
+      <div class="col-md-3 mb-4">
+        <div class="card h-100 shadow-sm">
+          <img src="https://via.placeholder.com/200" class="card-img-top" alt="Amoxicillin">
+          <div class="card-body text-center">
+            <h5 class="card-title">Amoxicillin</h5>
+            <p class="fw-bold text-success">₦1500</p>
+           <button class="btn btn-primary add-to-cart" data-title="Amoxicillin" data-price="1500">Add to Cart</button>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
 
-  <div class="col-md-4 col-sm-6">
-    <div class="card h-100 shadow-sm">
-      <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Skin Care Cream">
-      <div class="card-body">
-        <h5 class="card-title">Skin Care Cream</h5>
-        <p class="card-text">Protect and nourish your skin every day.</p>
-        <a href="#" class="btn btn-success">Buy Now</a>
+      <!-- Ibuprofen 400mg -->
+      <div class="col-md-3 mb-4">
+        <div class="card h-100 shadow-sm">
+          <img src="https://via.placeholder.com/200" class="card-img-top" alt="Ibuprofen 400mg">
+          <div class="card-body text-center">
+            <h5 class="card-title">Ibuprofen 400mg</h5>
+            <p class="fw-bold text-success">₦2500</p>
+            <button class="btn btn-primary add-to-cart" data-title="Ibuprofen 400mg" data-price="2500">Add to Cart</button>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
-</div>
 
+      <!-- Paracetamol -->
+      <div class="col-md-3 mb-4">
+        <div class="card h-100 shadow-sm">
+          <img src="https://via.placeholder.com/200" class="card-img-top" alt="Paracetamol">
+          <div class="card-body text-center">
+            <h5 class="card-title">Paracetamol</h5>
+            <p class="fw-bold text-success">₦500</p>
+           <button class="btn btn-primary add-to-cart" data-title="Paracetamol" data-price="500">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tramadol 50mg -->
+      <div class="col-md-3 mb-4">
+        <div class="card h-100 shadow-sm">
+          <img src="https://via.placeholder.com/200" class="card-img-top" alt="Tramadol 50mg">
+          <div class="card-body text-center">
+            <h5 class="card-title">Tramadol 50mg</h5>
+            <p class="fw-bold text-success">₦2000</p>
+           <button class="btn btn-primary add-to-cart" data-title="Tramadol 50mg" data-price="2000">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tramadol 100mg -->
+      <div class="col-md-3 mb-4">
+        <div class="card h-100 shadow-sm">
+          <img src="https://via.placeholder.com/200" class="card-img-top" alt="Tramadol 100mg">
+          <div class="card-body text-center">
+            <h5 class="card-title">Tramadol 100mg</h5>
+            <p class="fw-bold text-success">₦4500</p>
+            <button class="btn btn-primary add-to-cart" data-title="Tramadol 100mg" data-price="4500">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Vitamin C 1000mg -->
+      <div class="col-md-3 mb-4">
+        <div class="card h-100 shadow-sm">
+          <img src="https://via.placeholder.com/200" class="card-img-top" alt="Vitamin C 1000mg">
+          <div class="card-body text-center">
+            <h5 class="card-title">Vitamin C 1000mg</h5>
+            <p class="fw-bold text-success">₦5,500</p>
+            <button class="btn btn-primary add-to-cart" data-title="Vitamin C 1000mg" data-price="5500">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Centrum Multivitamins -->
+      <div class="col-md-3 mb-4">
+        <div class="card h-100 shadow-sm">
+          <img src="https://via.placeholder.com/200" class="card-img-top" alt="Centrum Multivitamins">
+          <div class="card-body text-center">
+            <h5 class="card-title">Centrum Multivitamins</h5>
+            <p class="fw-bold text-success">₦5500</p>
+            <button class="btn btn-primary add-to-cart" data-title="Centrum Multivitamins" data-price="5500">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Vitamin D3 -->
+      <div class="col-md-3 mb-4">
+        <div class="card h-100 shadow-sm">
+          <img src="https://via.placeholder.com/200" class="card-img-top" alt="Vitamin D3">
+          <div class="card-body text-center">
+            <h5 class="card-title">Vitamin D3 2000 IU</h5>
+            <p class="fw-bold text-success">₦4200</p>
+            <button class="btn btn-primary add-to-cart" data-title="Vitamin D3 2000 IU" data-price="4200">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Vitamin E -->
+      <div class="col-md-3 mb-4">
+        <div class="card h-100 shadow-sm">
+          <img src="https://via.placeholder.com/200" class="card-img-top" alt="Vitamin E">
+          <div class="card-body text-center">
+            <h5 class="card-title">Vitamin E</h5>
+            <p class="fw-bold text-success">₦7000</p>
+            <button class="btn btn-primary add-to-cart" data-title="Vitamin E" data-price="7000">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Green Tea -->
+      <div class="col-md-3 mb-4">
+        <div class="card h-100 shadow-sm">
+          <img src="https://via.placeholder.com/200" class="card-img-top" alt="Green Tea">
+          <div class="card-body text-center">
+            <h5 class="card-title">Green Tea</h5>
+            <p class="fw-bold text-success">₦5000</p>
+            <button class="btn btn-primary add-to-cart" data-title="Green Tea" data-price="5000">Add to Cart</button>
+        </div>
+      </div>
+      </div>
+
+      <!-- Chamomile Tea -->
+      <div class="col-md-3 mb-4">
+        <div class="card h-100 shadow-sm">
+          <img src="https://via.placeholder.com/200" class="card-img-top" alt="Chamomile Tea">
+          <div class="card-body text-center">
+            <h5 class="card-title">Chamomile Tea</h5>
+            <p class="fw-bold text-success">₦4500</p>
+            <button class="btn btn-primary add-to-cart" data-title="Chamomile Tea" data-price="4500">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Lungs detox -->
+      <div class="col-md-3 mb-4">
+        <div class="card h-100 shadow-sm">
+          <img src="https://via.placeholder.com/200" class="card-img-top" alt="Lungs Detox">
+          <div class="card-body text-center">
+            <h5 class="card-title">Lungs Detox</h5>
+            <p class="fw-bold text-success">₦6000</p>
+            <button class="btn btn-primary add-to-cart" data-title="Lungs Detox" data-price="6000">Add to Cart</button>
+          </div>
+        </div>
     </div>
+    <!--Afro-male-->
+    <div class="col-md-3 mb-4">
+        <div class="card h-100 shadow-sm">
+          <img src="https://via.placeholder.com/200" class="card-img-top" alt="Afro-male">
+          <div class="card-body text-center">
+            <h5 class="card-title">Afro-male</h5>
+            <p class="fw-bold text-success">₦8000</p>
+            <button class="btn btn-primary add-to-cart" data-title="Afro-Male" data-price="8000">Add to Cart</button>
+              </div>
+              </div>
+              </div>
+
+              <!--Anti-diabetes Tea-->
+              <div class="col-md-3 mb-4">
+        <div class="card h-100 shadow-sm">
+          <img src="https://via.placeholder.com/200" class="card-img-top" alt="Anti-diabetes Tea">
+          <div class="card-body text-center">
+            <h5 class="card-title">Anti-diabetes Tea</h5>
+            <p class="fw-bold text-success">₦7500</p>
+           <button class="btn btn-primary add-to-cart" data-title="Anti-Diabetes" data-price="7500">Add to Cart</button>
+              </div>
+              </div>
+              </div>
+  </div>
+  </div>
   </div>
 </section>
+
+<!-- View More Button -->
+<div class="text-center mt-5">
+  <button id="load-more" class="btn btn-outline-primary btn-lg px-5">View More Products</button>
+</div>
+<div id="more-products" class="container mt-4"></div>
+
 
 <!-- Footer -->
 <footer class="footer mt-5" style="background-color:#ffb347">
@@ -132,27 +301,266 @@
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 <script>
-  // Load products dynamically from JSON
-  fetch("products.json")
-    .then(response => response.json())
-    .then(products => {
-      const productList = document.getElementById("product-list");
-      productList.innerHTML = products.map(product => `
-        <div class="col-md-4 col-sm-6">
+document.addEventListener("DOMContentLoaded", function () {
+  const loadMoreBtn = document.getElementById("load-more");
+  const moreProductsContainer = document.getElementById("more-products");
+  const cartCountBadge = document.getElementById("cart-count");
+
+  // Load cart count
+  function updateCartCount() {
+    const cart = JSON.parse(localStorage.getItem("cart")) || [];
+    const totalQuantity = cart.reduce((sum, item) => sum + item.quantity, 0);
+    cartCountBadge.textContent = totalQuantity;
+  }
+
+  updateCartCount();
+
+  // Add product to cart
+  function addToCart(title, price, img) {
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+    const existing = cart.find(item => item.title === title);
+    if (existing) {
+      existing.quantity += 1;
+    } else {
+      cart.push({ title, price, img, quantity: 1 });
+    }
+
+    localStorage.setItem("cart", JSON.stringify(cart));
+    updateCartCount();
+    alert(`${title} added to cart`);
+  }
+
+  // Attach add-to-cart buttons
+  function attachAddButtons() {
+    const buttons = document.querySelectorAll(".btn-order");
+    buttons.forEach(btn => {
+      btn.addEventListener("click", (e) => {
+        e.preventDefault();
+        const card = btn.closest(".card");
+        const title = card.querySelector(".card-title").textContent;
+        const priceText = card.querySelector(".fw-bold.text-success").dataset.price;
+        const price = parseInt(priceText); // number only
+        const img = card.querySelector("img").src;
+        addToCart(title, price, img);
+      });
+    });
+  }
+
+
+
+   // Hidden products grouped by category
+  const hiddenProducts = {
+      "Antibiotics": [
+        { id: 101, title: "Amoxicillin", price: "3000", img: "https://via.placeholder.com/200" },
+        { id: 102, title: "Penicillin V", price: "2500", img: "https://via.placeholder.com/200" },
+        { id: 103, title: "Ciprofloxacin", price: "4500", img: "https://via.placeholder.com/200" },
+        { id: 104, title: "Azithromycin", price: "6500", img: "https://via.placeholder.com/200" },
+        { id: 105, title: "Doxycycline", price: "2000", img: "https://via.placeholder.com/200" },
+        { id: 106, title: "Metronidazole", price: "800", img: "https://via.placeholder.com/200" },
+        { id: 107, title: "Clindamycin", price: "5500", img: "https://via.placeholder.com/200" },
+        { id: 108, title: "Erythromycin", price: "4500", img: "https://via.placeholder.com/200" },
+        { id: 109, title: "Levofloxacin", price: "7000", img: "https://via.placeholder.com/200" },
+        { id: 110, title: "Trimethoprim-Sulfamethoxazole", price: "5500", img: "https://via.placeholder.com/200" },
+        { id: 111, title: "Nitrofurantoin", price: "2000", img: "https://via.placeholder.com/200" },
+        { id: 112, title: "Rifampicin", price: "8000", img: "https://via.placeholder.com/200" },
+        { id: 113, title: "Chloramphenicol", price: "1000", img: "https://via.placeholder.com/200" },
+        { id: 114, title: "Tetracycline", price: "1500", img: "https://via.placeholder.com/200" },
+        { id: 115, title: "Clarithromycin", price: "6000", img: "https://via.placeholder.com/200" },
+        { id: 116, title: "Cefuroxime", price: "6500", img: "https://via.placeholder.com/200" },
+        { id: 117, title: "Ceftriaxone", price: "10500", img: "https://via.placeholder.com/200" },
+      ],
+      "Antimalaria": [
+        { id: 201, title: "Artemether-Lumefantrine", price: "₦4,500", img: "https://via.placeholder.com/200" },
+        { id: 202, title: "Chloroquine", price: "1200", img: "https://via.placeholder.com/200" },
+        { id: 203, title: "Quinine", price: "3500", img: "https://via.placeholder.com/200" },
+        { id: 204, title: "Mefloquine", price: "5000", img: "https://via.placeholder.com/200" },
+      ],
+      "Antihistamine": [
+        { id: 301, title: "Cetirizine", price: "2000", img: "https://via.placeholder.com/200" },
+        { id: 302, title: "Loratadine", price: "1800", img: "https://via.placeholder.com/200" },
+        { id: 303, title: "Fexofenadine", price: "7500", img: "https://via.placeholder.com/200" },
+        { id: 304, title: "Diphenhydramine", price: "₦2,500", img: "https://via.placeholder.com/200" },
+        { id: 305, title: "Chlorpheniramine", price: "₦500", img: "https://via.placeholder.com/200" },
+      ],
+      "Anti-Cold": [
+        { id: 401, title: "Coldrex", price: "₦1,800", img: "https://via.placeholder.com/200" },
+        { id: 402, title: "Vicks Vaporub", price: "₦2,500", img: "https://via.placeholder.com/200" },
+        { id: 403, title: "Sudafed", price: "₦3,000", img: "https://via.placeholder.com/200" },
+        { id: 404, title: "Nasal Spray", price: "₦5,500", img: "https://via.placeholder.com/200" },
+        { id: 405, title: "Cough Drops", price: "₦1,200", img: "https://via.placeholder.com/200" },
+        { id: 406, title: "Zinc Lozenges", price: "₦4,000", img: "https://via.placeholder.com/200" }
+      ],
+      "Blood Tonics": [
+        { id: 501, title: "Bitterleaf Blood Tonic", price: "5500", img: "https://via.placeholder.com/200" },
+        { id: 502, title: "Folic Acid", price: "3500", img: "https://via.placeholder.com/200" },
+        { id: 503, title: "Iron Supplements", price: "5000", img: "https://via.placeholder.com/200" },
+        { id: 504, title: "Vitamin B12", price: "4000", img: "https://via.placeholder.com/200" },
+        { id: 505, title: "Astyfer", price: "6500", img: "https://via.placeholder.com/200" },
+        { id: 506, title: "Astymin Syrup", price: "6500", img: "https://via.placeholder.com/200" },
+        { id: 507, title: "Supramult", price: "4000", img: "https://via.placeholder.com/200" },
+        { id: 508, title: "Supramult Syrup", price: "4500", img: "https://via.placeholder.com/200" }
+      ],
+      "Contraceptives": [
+        { id: 601, title: "Postinor-2", price: "₦3,500", img: "https://via.placeholder.com/200" },
+        { id: 602, title: "Diane-35", price: "₦4,500", img: "https://via.placeholder.com/200" },
+        { id: 603, title: "Microgynon", price: "₦3,500", img: "https://via.placeholder.com/200" },
+        { id: 604, title: "Implanon", price: "₦18,000", img: "https://via.placeholder.com/200" },
+        { id: 605, title: "Condoms", price: "₦700", img: "https://via.placeholder.com/200" },
+        { id: 606, title: "Levofem", price: "₦2,500", img: "https://via.placeholder.com/200" }
+      ],
+      "Anti-Blood Pressure": [
+        { id: 701, title: "Amlodipine", price: "₦3,500", img: "https://via.placeholder.com/200" },
+        { id: 702, title: "Lisinopril", price: "₦4,000", img: "https://via.placeholder.com/200" },
+        { id: 703, title: "Losartan", price: "₦5,500", img: "https://via.placeholder.com/200" },
+        { id: 704, title: "Hydrochlorothiazide", price: "₦1,500", img: "https://via.placeholder.com/200" },
+        { id: 705, title: "Metoprolol", price: "₦4,500", img: "https://via.placeholder.com/200" },
+        { id: 706, title: "Carvedilol", price: "₦6,000", img: "https://via.placeholder.com/200" },
+        { id: 707, title: "Nifedipine", price: "₦3,000", img: "https://via.placeholder.com/200" },
+        { id: 708, title: "Valsartan", price: "₦5,000", img: "https://via.placeholder.com/200" }
+      ],
+      "Anti-Diabetes": [
+        { id: 801, title: "Metformin", price: "₦3,000", img: "https://via.placeholder.com/200" },
+        { id: 802, title: "Glipizide", price: "₦2,500", img: "https://via.placeholder.com/200" },
+        { id: 803, title: "Glibenclamide", price: "₦2,000", img: "https://via.placeholder.com/200" },
+        { id: 804, title: "Pioglitazone", price: "₦4,500", img: "https://via.placeholder.com/200" },
+        { id: 805, title: "Sitagliptin", price: "₦6,000", img: "https://via.placeholder.com/200" },
+        { id: 806, title: "Insulin", price: "₦8,000", img: "https://via.placeholder.com/200" }
+
+      ],
+      "Antifungal Cream": [
+        { id: 901, title: "Clotrimazole", price: "1500", img: "https://via.placeholder.com/200" },
+        { id: 902, title: "Miconazole", price: "2000", img: "https://via.placeholder.com/200" },
+        { id: 903, title: "Terbinafine", price: "4500", img: "https://via.placeholder.com/200" },
+        { id: 904, title: "Ketoconazole", price: "3500", img: "https://via.placeholder.com/200" },
+        { id: 905, title: "Econazole", price: "2500", img: "https://via.placeholder.com/200" },
+        { id: 906, title: "Funbact", price: "1800", img: "https://via.placeholder.com/200" }
+      ],
+      "Antibacterial Cream": [
+        { id: 1001, title: "Neosporin", price: "2000", img: "https://via.placeholder.com/200" },
+        { id: 1002, title: "Bactroban", price: "3500", img: "https://via.placeholder.com/200" },
+        { id: 1003, title: "Fusidic Acid", price: "4000", img: "https://via.placeholder.com/200" },
+        { id: 1004, title: "Polysporin", price: "2500", img: "https://via.placeholder.com/200" }
+      ],
+      "Vaginal Insert": [
+        { id: 2001, title: "Canesten", price: "2800", img: "https://via.placeholder.com/200" },
+        { id: 2002, title: "Gynazole", price: "3500", img: "https://via.placeholder.com/200" },
+        { id: 2003, title: "Clindamycin Vaginal Cream", price: "5000", img: "https://via.placeholder.com/200" },
+        { id: 2004, title: "Metronidazole Vaginal Gel", price: "4500", img: "https://via.placeholder.com/200" },
+        { id: 2005, title: "Fluconazole", price: "6000", img: "https://via.placeholder.com/200" },
+
+      ],
+      "Pain Relief Gel": [
+        { id: 3001, title: "Deep Heat Gel", price: "3200", img: "https://via.placeholder.com/200" },
+        { id: 3002, title: "Voltaren Gel", price: "6500", img: "https://via.placeholder.com/200" },
+        { id: 3003,title: "Biofreeze", price: "5000", img: "https://via.placeholder.com/200" },
+        { id: 3004, title: "Tiger Balm", price: "2800", img: "https://via.placeholder.com/200" },
+        { id: 3005, title: "Salonpas", price: "3500", img: "https://via.placeholder.com/200" }
+      ],
+      "Steroids Cream": [
+        { id: 4001, title: "Hydrocortisone Cream", price: "1500", img: "https://via.placeholder.com/200" },
+        { id: 4002, title: "Betamethasone Cream", price: "3000", img: "https://via.placeholder.com/200" },
+        { id: 4003, title: "Clobetasol Propionate", price: "4500", img: "https://via.placeholder.com/200" },
+        { id: 4004, title: "Mometasone Furoate", price: "2800", img: "https://via.placeholder.com/200" },
+        { id: 4005, title: "Triamcinolone Acetonide", price: "3500", img: "https://via.placeholder.com/200" }
+      ],
+      "Antacids": [
+        { id: 5001, title: "Omeprazole", price: "2500", img: "https://via.placeholder.com/200" },
+        { id: 5002, title: "Ranitidine", price: "1800", img: "https://via.placeholder.com/200" },
+        { id: 5003, title: "Esomeprazole", price: "4000", img: "https://via.placeholder.com/200" },
+        { id: 5004, title: "Lansoprazole", price: "3500", img: "https://via.placeholder.com/200" },
+        { id: 5005, title: "Aluminium Hydroxide", price: "1200", img: "https://via.placeholder.com/200" }
+      ],
+      "Laxatives": [
+        { id: 6001, title: "Bisacodyl", price: "1500", img: "https://via.placeholder.com/200" },
+        { id: 6002, title: "Senna", price: "2000", img: "https://via.placeholder.com/200" },
+        { id: 6003, title: "Polyethylene Glycol", price: "3500", img: "https://via.placeholder.com/200" },
+        { id: 6004, title: "Lactulose", price: "2800", img: "https://via.placeholder.com/200" },
+        { id: 6005, title: "Docusate Sodium", price: "1800", img: "https://via.placeholder.com/200" }
+      ],
+      "Soaps": [
+        { id: 7001, title: "Dettol Antibacterial Soap", price: "1800", img: "https://via.placeholder.com/200" },
+        { id: 7002, title: "Dove Beauty Bar", price: "3200", img: "https://via.placeholder.com/200" },
+        { id: 7003, title: "Lux Soap", price: "₦600", img: "https://via.placeholder.com/200" },
+        { id: 7004, title: "Medimix Herbal Soap", price: "3500", img: "https://via.placeholder.com/200" },
+        { id: 7005, title: "Imperial Leather", price: "700", img: "https://via.placeholder.com/200" },
+        { id: 7006, title: "Nivea Soap", price: "2500", img: "https://via.placeholder.com/200" }
+      ]
+    };
+let loaded = false;
+
+  loadMoreBtn.addEventListener("click", function () {
+    if (loaded) return;
+
+    for (const category in hiddenProducts) {
+      const heading = document.createElement("h3");
+      heading.className = "mt-5 text-primary";
+      heading.textContent = category;
+      moreProductsContainer.appendChild(heading);
+
+      const row = document.createElement("div");
+      row.className = "row g-4 mt-3";
+
+      hiddenProducts[category].forEach(product => {
+        const col = document.createElement("div");
+        col.className = "col-md-3 col-sm-6 mb-4";
+        col.innerHTML = `
           <div class="card h-100 shadow-sm">
-            <img src="${product.image}" class="card-img-top" alt="${product.name}">
+            <img src="${product.img}" class="card-img-top" alt="${product.title}">
             <div class="card-body">
-              <h5 class="card-title">${product.name}</h5>
-              <p class="card-text">${product.description}</p>
-              <a href="#" class="btn btn-success">Buy Now</a>
+              <h5 class="card-title">${product.title}</h5>
+              <p class="fw-bold text-success" data-price="${product.price}">₦${product.price.toLocaleString()}</p>
+              <a href="#" class="btn btn-primary btn-sm btn-order">Order Now</a>
             </div>
           </div>
-        </div>
-      `).join("");
-    })
-    .catch(err => console.error("Error loading products:", err));
-</script>
-<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+        `;
+        row.appendChild(col);
+      });
 
+      moreProductsContainer.appendChild(row);
+    }
+
+    attachAddButtons(); // for new buttons
+    loaded = true;
+    loadMoreBtn.textContent = "No More Products";
+    loadMoreBtn.disabled = true;
+  });
+
+  attachAddButtons(); // for initial buttons
+});
+</script>
+
+<script>
+
+  // Load cart from localStorage or create new array
+  let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+  // Add event to all Add to Cart buttons
+  document.querySelectorAll('.add-to-cart').forEach(button => {
+    button.addEventListener('click', (e) => {
+      e.preventDefault();
+      const title = button.getAttribute('data-title');
+      const price = parseFloat(button.getAttribute('data-price'));
+      
+      // Check if item already exists in cart
+      const existingItem = cart.find(item => item.title === title);
+      if(existingItem){
+        existingItem.quantity += 1; // Increase quantity
+      } else {
+        cart.push({title, price, quantity: 1});
+      }
+
+      localStorage.setItem('cart', JSON.stringify(cart));
+      alert(`${title} added to cart!`);
+    });
+  });
+</script>
+<script>
+  AOS.init({
+    duration: 800,
+    easing: 'slide',
+    once: true
+  });
+</script>
 </body>
 </html>
